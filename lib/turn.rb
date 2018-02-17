@@ -40,7 +40,10 @@ def turn(board)
   user_input = gets.strip
   index = input_to_index(user_input)
 
-  if index(0,8) == false
+  if index(0,8) == true
+    move(board, index, token)
+    display_board(board)
+  else
     turn(board)
   end
 
