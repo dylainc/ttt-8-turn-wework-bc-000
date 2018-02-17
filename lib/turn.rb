@@ -37,9 +37,5 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-    if gets.chomp.between?(1,9) == true
-      move(board, input_to_index(user_input), token)
-    else
-      turn(board)
-    end
+
 end
