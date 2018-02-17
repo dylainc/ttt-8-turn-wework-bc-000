@@ -32,7 +32,11 @@ def move(board, index, token)
 end
 
 def input_to_index(user_input)
-  index = user_input.to_i - 1
+  if user_input.between(1,9) == true
+    index = user_input.to_i - 1
+  else
+    turn(board)
+  end
 end
 
 def turn(board)
