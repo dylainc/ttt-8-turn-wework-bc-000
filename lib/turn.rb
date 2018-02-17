@@ -30,6 +30,6 @@ def move(board, input, token = "X")
   board[input_to_index(input)] = token
 end
 
-def input_to_index(input)
-  index = input - 1
+def input_to_index(user_input)
+  index = user_input - 1
 end
