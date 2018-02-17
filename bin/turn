@@ -6,3 +6,9 @@ board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 puts "Welcome to Tic Tac Toe!"
 display_board(board)
 turn(board)
+if index.between?(0,8) == true
+  move(board, index, token)
+  display_board(board)
+else
+  turn(board)
+end
