@@ -32,16 +32,17 @@ def move(board, index, token)
 end
 
 def input_to_index(user_input)
-  if user_input.between(1,9) == true
-    index = user_input.to_i - 1
-  else
-    turn(board)
-  end
+  index = user_input.to_i - 1
 end
 
 def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.strip
   index = input_to_index(user_input)
+  
+  if index(0,8) == false
+    turn(board)
+  end
+  
   #move(board, index, token)
 end
