@@ -37,4 +37,9 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
+    if user_input.between?(1,9)
+      move(board, input_to_index(user_input), token)
+    else
+      turn(board)
+    end
 end
